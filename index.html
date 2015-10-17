@@ -10,7 +10,7 @@
     <div id="header" class="content">
       <h1><a id="about"></a>About Me</h1>
       <p>
-        My name is Michelle and I'm a dog person.
+        My name is <span id="user-name">Michelle</span> and I'm a dog person.
       </p>
     </div>
     
@@ -75,5 +75,13 @@
     <div id="copyright" class="content">
       &copy; 2015 Michelle Dong, All Rights Reserved.
     </div>
+    <script type="text/javascript">
+      function replaceName() {
+        var myNewName = window.prompt('Pick a new name!');
+        document.getElementByID('user-name').innerHTML = myNewName;
+      }
+      
+      document.onclick = replaceName;
+    </script>
   </body>
 </html>
